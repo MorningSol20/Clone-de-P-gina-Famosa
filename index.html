@@ -19,7 +19,7 @@
     </header>
     <main class="container">
 
-        <img src="img/logo-falso.png" alt="Logo do Google" id="logo">
+        <img src="img/logo-falso.png" alt="Logo do Google" id="logo" width="270" height="92" draggable="false">
         
         <form action="https://www.google.com/search" method="GET" class="search-form">
             <input type="text" name="q" class="search-input">
@@ -50,6 +50,13 @@
                 <a href="#">Configurações</a>
             </div>
         </div>
+
+        <script>
+            // Impede que a imagem do logo seja arrastada
+            document.getElementById('logo').addEventListener('dragstart', function(event) {
+                event.preventDefault();
+            });
+        </script>
     </footer>
 </body>
 </html>
